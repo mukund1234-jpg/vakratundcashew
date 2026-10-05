@@ -32,7 +32,7 @@ export const business = {
   ],
 
   mapsEmbedUrl:
-    'https://www.google.com/maps?q=Kankavli,+Sindhudurg,+Maharashtra&output=embed',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.894554715833!2d73.67074029373194!3d16.270230754913406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc03d56ee8debff%3A0xedbef069ad2efbb7!2z4KS14KSV4KWN4KSw4KSk4KWB4KSC4KShIOCkleClheCktuClgQ!5e1!3m2!1sen!2sin!4v1791218058618!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin',
   mapsDirectionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=Kankavli,+Sindhudurg,+Maharashtra',
 
