@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-husk-800 font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-husk-900;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.turmeric.500');
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
+  }
+  .section-pad {
+    @apply py-16 sm:py-24;
+  }
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* १. Google Translate चा वरचा Banner लपवण्यासाठी */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+/* Navbar चा भाग पुन्हा दिसावा म्हणून `LanguageSwitcher` च्या div मधील .skiptranslate पूर्ववत करा */
+#google_translate_element .skiptranslate {
+  display: inline-block !important;
+}
+
+/* २. Page Body वर ढकलला जाण्यापासून रोखण्यासाठी */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* ३. Translate केल्यानंतर येणाऱ्या Highlights / Tooltip पॉपअप लपवण्यासाठी */
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
